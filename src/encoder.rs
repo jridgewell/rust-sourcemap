@@ -41,9 +41,6 @@ fn serialize_mappings(sm: &SourceMap) -> String {
                 prev_dst_line += 1;
             }
         } else if idx > 0 {
-            if Some(&token) == sm.get_token(idx - 1).as_ref() {
-                continue;
-            }
             rv.push(',');
         }
 
